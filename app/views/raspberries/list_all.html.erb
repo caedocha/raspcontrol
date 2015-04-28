@@ -1,0 +1,15 @@
+<div class='center'>
+  <%= link_to('Back', root_path, class: 'block') %>
+  <div id='output'></div>
+  <% @raspberries.each do |r| %>
+    <%= render 'raspberry', raspberry: r %>
+  <% end %>
+  <div class='clear'></div>
+</div>
+
+<script>
+$(document).ready(function() {
+  execRaspberry.init();
+  output.init();
+});
+</script>

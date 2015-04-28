@@ -1,0 +1,19 @@
+<div class='center'>
+  <div id='message'></div>
+  <div id='output'></div>
+  <%= link_to 'Commands', list_all_raspberries_path %>
+
+  <%= text_area_tag 'command' %>
+  <%= button_tag 'Execute', type: 'button', id: 'execute' %>
+  <%= text_field_tag 'name' %>
+  <%= button_tag 'Create', type: 'button', id: 'create_command' %>
+  <%= button_tag 'Save', type: 'button', id: 'save_command' %>
+
+</div>
+<script>
+  $(document).ready(function() {
+    execCommand.init();
+    saveCommand.init();
+    output.init();
+  });
+</script>

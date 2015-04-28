@@ -1,0 +1,4 @@
+<div id='<%= "raspberry_#{raspberry.id}" %>'class="raspberry">
+  <p><%= raspberry.name %></p>
+  <%= hidden_field_tag("raspberry_command_#{raspberry.id}", raspberry.command, class: 'command') %>
+</div>
