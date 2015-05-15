@@ -14,11 +14,12 @@ class OMXPlayer
   end
 
   def self.play_pause
-    `xdotool key p`
+    omx_window = WindowInfo.get_omx_info
+    `xdotool windowactivate #{omx_window} && xdotool key p`
   end
 
   def self.quit
-    `xdotool key escape`
+    `xdotool key q`
   end
 
   def self.increase_volume
