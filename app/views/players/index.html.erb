@@ -1,0 +1,12 @@
+<% @video_libraries.each do |library, files| %>
+  <div class='library'>
+    <b><%= library %></b>
+    <ol>
+      <% files.each do |file| %>
+      <li>
+        <%= link_to file, launch_player_path, remote: true%>
+      </li>
+      <% end %>
+    </ol>
+  </div>
+<% end %>
