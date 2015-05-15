@@ -1,0 +1,8 @@
+<%= link_to 'Play', exec_command_player_path(command: 'play_pause'), remote: true %><br />
+<%= link_to 'Pause', exec_command_player_path(command: 'play_pause'), remote: true %><br />
+<%= link_to 'Quit', exec_command_player_path(command: 'quit'), remote: true %><br />
+<%= link_to '+ VOL', exec_command_player_path(command: 'increase_volume'), remote: true %><br />
+<%= link_to '- VOL', exec_command_player_path(command: 'decrease_volume'), remote: true %><br />
+<%= link_to '>>', exec_command_player_path(command: 'seek_forward'), remote: true %><br />
+<%= link_to '<<', exec_command_player_path(command: 'seek_backward'), remote: true %><br />
+

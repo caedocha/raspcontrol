@@ -10,7 +10,7 @@ class PlayersController < ApplicationController
   end
 
   def exec_command
-    OMXPlayer.send(params[:video].to_sym)
+    OMXPlayer.send(params[:command].to_sym)
     render nothing: true
   end
 
