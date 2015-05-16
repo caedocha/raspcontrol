@@ -22,7 +22,6 @@ class OMXPlayer
   def self.quit
     omx_window = WindowInfo.get_omx_info
     `#{EnvUtils.set_env_display} && xdotool windowactivate #{omx_window} && xdotool key q`
-    EnvUtils.kill_all_omx_processes
   end
 
   def self.increase_volume
