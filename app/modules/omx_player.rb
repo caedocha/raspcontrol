@@ -45,17 +45,17 @@ class OMXPlayer
 
   private
 
-  def set_env_display
+  def self.set_env_display
     'export DISPLAY=:0'
   end
 
-  def exec_command_on_window
+  def self.exec_command_on_window
   end
 
-  def is_xdotool_installed?
+  def self.is_xdotool_installed?
   end
 
-  def is_omxplayer_installed?
+  def self.is_omxplayer_installed?
   end
 
 end
