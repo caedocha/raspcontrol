@@ -21,6 +21,8 @@ module EnvUtils
       begin
         Process.kill('KILL', pid.to_i)
       rescue
+        pr "Could not kill process: #{pid}"
+        pr "Process info: #{`ps -p #{pid} -o comm=`}"
         Rails.logger.info("Could not kill process: #{pid}")
         Rails.logger.info("Process info: #{`ps -p #{pid} -o comm=`}")
       end

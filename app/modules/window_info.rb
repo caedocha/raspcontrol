@@ -4,7 +4,7 @@ class WindowInfo
     windows = get_all_windows
     windows.select do |window|
       info = get_window_info(window)
-      info.include? 'omxplayer'
+      info.include? 'WM_NAME(STRING) = "omxplayer"'
     end.first
   end
 
