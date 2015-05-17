@@ -6,9 +6,15 @@
     <ol>
       <% files.each do |file| %>
       <li>
-        <%= link_to file, launch_player_path(video: file), remote: true%>
+        <%= link_to trim_path(library, file), launch_player_path(video: file), remote: true %>
       </li>
       <% end %>
     </ol>
   </div>
 <% end %>
+
+<script>
+  $(document).ready(function() {
+    players.init();
+  });
+</script>
