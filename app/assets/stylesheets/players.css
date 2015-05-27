@@ -34,3 +34,68 @@
   color: #363636;
   word-wrap: break-word;
 }
+
+#player_controls {
+  background-color: #89BDE8;
+  padding: 4%;
+  border-radius: 10px;
+  font-size: 18px;
+  font-family: 'arial';
+  margin: 0% 4%;
+  margin-bottom: 10px;
+  border: 5px solid #46A3F0;
+}
+
+.icon {
+  display: block;
+  width: 64px;
+  height: 64px;
+  background-size: 64px 64px;
+  background-repeat: no-repeat;
+  float: left;
+  margin-left: 40px;
+}
+
+.icon_hover {
+  background-color: #2178BF;
+  border-radius: 100%;
+}
+
+.first_item {
+  margin-left: 0;
+}
+
+.second_row {
+  margin-top: 30px;
+}
+
+.play_pause {
+  background-image: url('play_pause.png');
+}
+
+.exit {
+  background-image: url('exit.png');
+}
+
+.fast_forward {
+  background-image: url('fast_forward.png');
+}
+
+.fast_backward {
+  background-image: url('fast_backward.png');
+}
+
+.volume_up {
+  background-image: url('volume_up.png');
+}
+
+.volume_down {
+  background-image: url('volume_down.png');
+}
+
+.clearfix:after {
+  content: " ";
+  display: block; 
+  height: 0;
+  clear: both;
+}

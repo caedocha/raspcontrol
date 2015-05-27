@@ -1,8 +1,14 @@
-<%= link_to 'Play', exec_command_player_path(command: 'play_pause'), remote: true %><br />
-<%= link_to 'Pause', exec_command_player_path(command: 'play_pause'), remote: true %><br />
-<%= link_to 'Quit', exec_command_player_path(command: 'quit'), remote: true %><br />
-<%= link_to '+ VOL', exec_command_player_path(command: 'increase_volume'), remote: true %><br />
-<%= link_to '- VOL', exec_command_player_path(command: 'decrease_volume'), remote: true %><br />
-<%= link_to '>>', exec_command_player_path(command: 'seek_forward'), remote: true %><br />
-<%= link_to '<<', exec_command_player_path(command: 'seek_backward'), remote: true %><br />
+<div id="player_controls" class='clearfix'>
+  <%= link_to '', exec_command_player_path(command: 'play_pause'), remote: true, class: 'play_pause icon first_item' %>
+  <%= link_to '', exec_command_player_path(command: 'quit'), remote: true, class: 'exit icon' %>
+  <%= link_to '', exec_command_player_path(command: 'increase_volume'), remote: true, class: 'volume_up icon' %>
+  <%= link_to '', exec_command_player_path(command: 'decrease_volume'), remote: true, class: 'volume_down icon first_item second_row' %>
+  <%= link_to '', exec_command_player_path(command: 'seek_forward'), remote: true, class: 'fast_forward icon second_row' %>
+  <%= link_to '', exec_command_player_path(command: 'seek_backward'), remote: true, class: 'fast_backward icon second_row' %>
+</div>
 
+<script>
+  $(document).ready(function() {
+    playerControls.init();
+  });
+</script>
